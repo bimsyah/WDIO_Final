@@ -32,11 +32,23 @@ class ElementsPage extends Page {
     }
     
     async clickButtons() {
-        await (await this.btnButtons).click();
+        await this.btnButtons.click()
+        await browser.pause(3000)
     }
    
     async clickClickMe() {
-        await this.btnClickMe.click();        
+        await this.btnClickMe.click();
+        await browser.pause(2000)           
+    }
+    
+    async clickRightClick() {
+        await this.btnRightClickMe.click({ button: 'right' });
+        await browser.pause(2000)   
+    }
+
+    async clickDoubleClick() {
+        await this.btnDoubleClickMe.doubleClick();
+        await browser.pause(2000)
     }
 
     async assertCommandClick () {
@@ -53,13 +65,6 @@ class ElementsPage extends Page {
         const text = await this.cmmndDouble.isDisplayed()
         expect(text).to.equal(true);
     }
-
-    async clickRightClick() {
-        await this.btnRightClickMe.click({ button: 'right' });   
-    }
-
-    async clickDoubleClick() {
-        await this.btnDoubleClickMe.doubleClick();    }
 
     open() {
         return super.open();

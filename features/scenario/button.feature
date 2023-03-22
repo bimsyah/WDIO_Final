@@ -1,16 +1,16 @@
 Feature: Demoqa app Elements menu
 
     @elements @buttons
-    # Scenario: Access the elements menu
-    # Given I am on the front page
-    # When I click the elements menu
-    # When I click the buttons menu
-    # When I single click on click me
-    # Then I should see the command a dynamic click
-    # When I click right click
-    # Then I should see the command a right click
-    # When I click double click
-    # Then I should see the command a double click
+    Scenario: Access the elements menu
+    Given I am on the front page
+    When I click the elements menu
+    When I click the buttons menu
+    Then I single click on click me
+    Then I should see the command a dynamic click
+    When I click right click
+    Then I should see the command a right click
+    When I click double click
+    Then I should see the command a double click
 
 
     @interactions @dragbox
